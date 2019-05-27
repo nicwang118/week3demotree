@@ -5,7 +5,7 @@ var map_manager = {
 
 map_manager.map_items = [
     {
-      "pokemon_id" : 12,
+      "pokemon_id" : 250,
       "expire" : 1476589403,
       "longitude" : -73.9800345,
       "latitude" : 40.7596651,
@@ -35,7 +35,7 @@ function get_pokemon_layer_from_map_items(map_items) {
     for (var i in map_items) {
       var map_item = map_items[i];
       var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(map_item["latitude"], map_item["longitude"]), 
-                                               { icon: 'images/pushpin_images/pokemon/' + map_item['pokemon_id'] + '.png' ,
+                                               { icon:  map_item['pokemon_id'] + '.png' ,
                                                  title: get_counter_down_time_from_expire_epoch(map_item['expire']) });
       pushpins.push(pushpin)
     }
