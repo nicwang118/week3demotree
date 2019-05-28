@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>loadmapasyncHTML</title>
-        <style type='text/css'>body{margin:0;padding:0;overflow:hidden;font-family:'Segoe UI',Helvetica,Arial,Sans-Serif}</style>
+        <title>loadMapAsyncHTML</title>
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
-        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AgRlpxLYPTpVZLgVJ8va0fYhxfliQz2JMPp-6qNcFBoEYR958TBrJG-XQfJA40qt'></script>
-        <script type='text/javascript' src='mymap.js'></script>
     </head>
-    <body onload='loadMapScenario();'>
+    <body>
         <div id='printoutPanel'></div>
         
         <div id='myMap' style='width: 100vw; height: 100vh;'></div>
+        <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+        <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+        <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+        <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+        <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+        <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+        <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+        <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+        <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+        <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+        <script type="text/javascript" src="apigClient.js"></script>
+        <script type='text/javascript' src="mymap.js"></script>
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AgRlpxLYPTpVZLgVJ8va0fYhxfliQz2JMPp-6qNcFBoEYR958TBrJG-XQfJA40qt&branch=release&callback=loadMapScenario' async defer></script>
     </body>
 </html>
